@@ -168,10 +168,10 @@ function getNextPrevPalindrome(date){
     //Find min previous or next date palindrome
     var minDays = Math.min(countprev,countnext);
     if(countnext == minDays){
-        return [days,nextDate];
+        return [minDays,nextDate];
     }
     else if(countprev == minDays){
-        return [days,PrevDate];
+        return [minDays,PrevDate];
     }
 }
 
