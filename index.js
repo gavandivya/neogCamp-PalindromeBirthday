@@ -12,14 +12,18 @@ function show(){
         month:Number(dateList[1]),
         year:Number(dateList[0])
     }
-    if(checkPalAllDateFormat(date)){
-        output.innerText = "Yay! its a Palindrome 😃";
+    if(input.value){
+        if(checkPalAllDateFormat(date)){
+            output.innerText = "Yay! its a Palindrome 😃";
+        }
+        else{
+            var[count,Date] = getNextPrevPalindrome(date);
+            output.innerText = `The palindrome date is ${Date.day} - ${Date.month} - ${Date.year}, you missed it by ${count} days!😓 `;
+        }
     }
     else{
-        var[count,Date] = getNextPrevPalindrome(date);
-        output.innerText = `The palindrome date is ${Date.day} - ${Date.month} - ${Date.year}, you missed it by ${count} days!😓 `;
+        output.innerText = "Please select the date";
     }
-
 }
 
 const reverseStr = str => {
