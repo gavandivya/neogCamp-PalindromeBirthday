@@ -6,6 +6,7 @@ const output = document.querySelector('#outputpara');
 btn.addEventListener('click',show);
 
 function show(){
+    output.innerText = " ";
     var dateList = input.value.split('-');
     var date = {
         day:Number(dateList[2]),
@@ -33,7 +34,6 @@ const reverseStr = str => {
 
 const palindrome = str => {
     var reverse = reverseStr(str);
-
     return str === reverse;
 }
 
