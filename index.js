@@ -76,7 +76,7 @@ const checkPalAllDateFormat = (date) => {
         if(palindrome(e))
         {
             ispalindrome = true;
-            console.info(e);
+            //console.info(e);
             return ispalindrome; //used return instead of break
         }
     });
